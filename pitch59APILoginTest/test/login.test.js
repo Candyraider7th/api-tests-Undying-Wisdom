@@ -29,11 +29,6 @@ it(`Testing to see if we can signin`, async () => {
     throw console.log(errorCaught);
   }
 
-<<<<<<< HEAD
-=======
-  assert.equal(errorWasCaught,false);
-  console.log(json.code);
->>>>>>> main
   assert.equal(errorWasCaught,false);
   console.log(json.code);
   assert.equal(json.code, 2012);
