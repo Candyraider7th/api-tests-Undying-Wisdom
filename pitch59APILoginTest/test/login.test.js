@@ -1,9 +1,6 @@
-/*import assert from 'assert'*/
 import assert from 'assert';
-/*import login from '../test/login.test.js';*/
-
-const fetch = require("node-fetch");
-const config = require("config");
+import fetch from 'node-fetch';
+import config from 'config';
 
 const loginUrl = config.get("pitch59-url") + "/api/account/login";
 
@@ -32,8 +29,7 @@ it(`Testing to see if we can signin`, async () => {
     throw console.log(errorCaught);
   }
 
-  /*expect(errorWasCaught).toBe(false);*/
+  assert.equal(errorWasCaught,false);
   console.log(json.code);
-  expect(json.code).toBe(2012);
   assert.equal(errorWasCaught,false);
 });
