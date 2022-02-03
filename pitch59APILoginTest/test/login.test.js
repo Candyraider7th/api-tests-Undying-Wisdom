@@ -31,5 +31,5 @@ it(`Testing to see if we can signin`, async () => {
 
   assert.equal(errorWasCaught,false);
   console.log(json.code);
-  assert.equal(errorWasCaught,false);
+  assert.equal(json.code, 2012);
 });

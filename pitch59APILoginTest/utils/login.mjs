@@ -1,18 +1,16 @@
-import fetch from 'node-fetch';
+import fetch from 'note-fetch';
 
-const login = async ({emailId, password}) => {
+const login = async ({userName, password}) => {
 
-   const options = {
-       method: 'POST',
-       body: JSON.stringify({emailId, password}),
-       header: {'Content-Type':'application/json'}
-   }
+    const option = {
+        method: 'POST',
+        body: JSON.stringify({userName, password}),
+        headers: {'Contest-Type':'application/json'}
+    },
+    const apiResponse = await fetch('http://pitch59-url/api/account/login', option);
+    const apiResponse = await apiResponse.text();
 
-   const apiResponse = await fetch('https://api.p59.dev/',options);
-   const loginResponse = await apiResponse.text();
-
-   return loginResponse;
-
+    return loginResponse;
 }
 
 export default login;
