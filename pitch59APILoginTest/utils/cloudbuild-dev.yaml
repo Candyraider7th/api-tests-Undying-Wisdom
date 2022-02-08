@@ -1,0 +1,9 @@
+#This is the main idea of this yaml file
+steps: 
+- name: 'grc.io/cloud-builders/docker'
+  id: Build Docker Image 
+  args: 
+  - 'build'
+  - '.'
+  - '-t'
+  - 'grc.io/$PROJECT_ID/mugarra-api-test:latest'
