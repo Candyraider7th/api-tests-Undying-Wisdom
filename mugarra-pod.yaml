@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mugarra-moses
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mugarra-moses
+  template: 
+    metadata: 
+      labels: 
+        app: mugarra-moses
+    spec: 
+      containers:
+      - name: mugarra-moses
+        image: busybox 
+        ports: 
+        - containerPort: 80
+        resources: 
+          limits:
+            cpu: 100m
+            memory: 250m
+          requests: 
+            cpu: 50m
+            memory: 100m
