@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alexander-palmer
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: alexander-palmer
+  template:
+    metadata:
+      labels:
+        app: alexander-palmer
+    spec:
+      containers:
+      - name: alexander-palmer
+        image: nginx
+        ports: 
+        - containerPort: 80
+        resources: 
+          limits:
+            cpu: 100m
+            memory: 250m
+          requests:
+            cpu: 100m
+            memory: 250m
