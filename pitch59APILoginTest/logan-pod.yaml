@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logan-bradford
+spec: 
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: logan-bradford
+    template: 
+      metadata:
+        labels:
+          app: logan-bradford
+      spec: 
+        containers:
+        - name: logan-bradford
+          image: nginx
+          ports:
+          - containerPort: 80
+          resources: 
+            limits: 
+              cpu: 100m
+              memory: 250m
+            requests:
+              cpu: 50m
+              memory: 100m
+              
+
+    
