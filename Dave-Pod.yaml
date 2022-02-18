@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dave-samson
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: dave-samson
+  template:
+    metadata:
+      labels:
+        app: dave-samson
+    spec:
+      containers:
+      - name: dave-samson
+        image: nginx
+        ports: 
+        - containerPort: 80
+        resources: 
+          limits:
+            cpu: 100m
+            memory: 250m
+          requests:
+            cpu: 100m
+            memory: 250m
