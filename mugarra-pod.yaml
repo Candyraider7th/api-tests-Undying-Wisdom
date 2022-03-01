@@ -14,7 +14,7 @@ spec:
     spec: 
       containers:
       - name: mugarra-moses
-        image: busybox 
+        image: nginx 
         ports: 
         - containerPort: 80
         resources: 
