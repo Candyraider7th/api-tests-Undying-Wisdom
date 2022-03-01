@@ -1,12 +1,16 @@
 #This is the main idea of this yaml file
 steps: 
+
+#This step builds the container image
 - name: 'grc.io/cloud-builders/docker'
   id: Build Docker Image 
   args: 
   - 'build'
   - '-t'
   - 'grc.io/$PROJECT_ID/mugarra-api-test:latest'
- -'.'
+  -'.'
+
+# The above command runs: docker build -t gcr.io/$PROJECT_ID/mugarra-api-test:latest .
 
 - name: 'grc.io/cloud-builders/docker'
   id: push 
