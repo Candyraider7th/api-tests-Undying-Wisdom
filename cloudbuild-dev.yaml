@@ -8,7 +8,7 @@ steps:
   - 'build'
   - '-t'
   - 'grc.io/$PROJECT_ID/mugarra-api-test:latest'
-  -'.'
+  - '.'
 
 # The above command runs: docker build -t gcr.io/$PROJECT_ID/mugarra-api-test:latest .
 
